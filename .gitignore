@@ -1,0 +1,31 @@
+# Compiled class file
+*.class
+*.iml
+*.idea
+target/
+logs/
+**/bin
+**/.settings
+**/.classpath
+**/target
+*_app_logs
+
+
+# Log file
+*.log
+*.factorypath
+
+
+# Package Files #
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+
+# Eclipse #
+.classpath
+.project
+.settings/
