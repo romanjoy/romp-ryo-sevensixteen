@@ -1,5 +1,6 @@
 package hello;
 
+import org.junit.Assert;
 import org.junit.Test;
 
 public class HelloWorldTest {
@@ -7,7 +8,7 @@ public class HelloWorldTest {
     @Test
     public void sayHello() {
         HelloWorld helloWorld = new HelloWorld();
-        System.out.println(helloWorld.sayHello());
+        Assert.assertEquals("hello world", helloWorld.sayHello());
     }
 
 }
