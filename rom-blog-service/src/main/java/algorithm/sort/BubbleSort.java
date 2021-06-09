@@ -1,27 +1,29 @@
 package algorithm.sort;
 
 /**
- * @author fuqiliang
- * <p>
- * bubbleSort
+ * Base chain reverse
+ *
+ * @author Roman Fu
+ * @version 1.0 Bubble sort <br>
  */
 public class BubbleSort {
+    private BubbleSort() {
+        throw new IllegalStateException("Utility class");
+    }
 
-    public static void main(String[] args) {
-        int arr[] = {8, 5, 3, 2, 4};
+    public static int[] bubbleSort(int[] arr) {
 
-        for (int i = 0; i < arr.length; i++) {  // foreach arr length
-            for (int j = 0; j < arr.length - i - 1; j++) {
-                if (arr[j] > arr[j + 1]) {
-                    int temp = arr[j + 1];
-                    arr[j + 1] = arr[j];  // change pos
-                    arr[j] = temp;
+        for (int i = 0; i < arr.length; i++) {  // forEach array's length
+
+            for (int index = 0; index < arr.length - i - 1; index++) {  /* equal times = element numbers - 1 */
+                if (arr[index] > arr[index + 1]) {
+                    int temp = arr[index + 1];
+                    arr[index + 1] = arr[index];  // change array's position
+                    arr[index] = temp;
                 }
             }
         }
 
-        for (int a : arr) {
-            System.out.print(" " + a);
-        }
+        return arr;
     }
 }
