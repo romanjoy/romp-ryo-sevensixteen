@@ -4,7 +4,8 @@ package algorithm.chain;
  * Base chain reverse
  *
  * @author Roman Fu
- * @version 1.0
+ * @version 1.0 Chain forEach <br>
+ * 1.1 Chain Recursion Formula
  */
 public class ChainReverse {
     private ChainReverse() {
@@ -12,9 +13,9 @@ public class ChainReverse {
     }
 
     /* V1.0: Chain forEach */
-    public static String reverse(ListNode<String> node) {
+    public static ListNode<String> reverse(ListNode<String> node) {
         if (node == null) {
-            return "";
+            return null;
         }
         ListNode<String> cursor = node;  // cursor forEach
         ListNode<String> revHolder = new ListNode<>();  // holder
@@ -26,7 +27,20 @@ public class ChainReverse {
             cursor = next;  // continue to forEach
         }
 
-        return revHolder.toString();
+        return revHolder;
     }
 
+
+    /* V1.1: Chain Recursion */
+    public static ListNode<String> reverseByRec(ListNode<String> node) {
+        if (node == null || node.next == null) {
+            return node;
+        }
+        ListNode<String> temp = node.next;
+        ListNode<String> newNode = reverseByRec(node.next);
+        temp.next = node;
+        node.next = null;
+
+        return newNode;
+    }
 }

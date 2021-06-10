@@ -1,18 +1,21 @@
 package algorithm.sort;
 
 /**
- * @author fuqiliang
- * <p>
  * Selection Sort
+ *
+ * @author Roman Fu
+ * @version 1.0
  */
 public class SelectionSort {
+    private SelectionSort() {
+        throw new IllegalStateException("Utility class");
+    }
 
-    public static void main(String[] args) {
-        int arr[] = {6, 5, 3, 2, 4};
+    public static int[] sort(int[] arr) {
 
-        for (int i = 0; i < arr.length; i++) {  // foreach arr length
+        for (int i = 0; i < arr.length; i++) {  // forEach array's length
             int min = arr[i];  // default first is min
-            int index = i;
+            int index = i;  // sava min's index
 
             for (int j = i + 1; j < arr.length; j++) {
                 if (min > arr[j]) {
@@ -26,8 +29,6 @@ public class SelectionSort {
             arr[index] = temp;
         }
 
-        for (int a : arr) {
-            System.out.print(" " + a);
-        }
+        return arr;
     }
 }

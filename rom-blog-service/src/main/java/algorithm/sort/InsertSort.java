@@ -1,29 +1,31 @@
 package algorithm.sort;
 
 /**
- * @author fuqiliang
- * <p>
  * Insert Sort
+ *
+ * @author Roman Fu
+ * @version 1.0
  */
 public class InsertSort {
+    private InsertSort() {
+        throw new IllegalStateException("Utility class");
+    }
 
-    public static void main(String[] args) {
-        int arr[] = {7, 5, 3, 2, 4};
+    public static int[] sort(int[] arr) {
 
-        for (int i = 1; i < arr.length; i++) {  // foreach arr length
-            for (int j = i; j > 0; j--) {  // right --> left, begin from pos[1]
-                if (arr[j] < arr[j - 1]) {
-                    int temp = arr[j - 1];
-                    arr[j - 1] = arr[j];
-                    arr[j] = temp;
-                } else {
+        for (int i = 1; i < arr.length; i++) {  // forEach (array's length -1)
+            // cursor from right to left, position[1] equal pos[0]
+            for (int cusor = i; cusor > 0; cusor--) {
+                if (arr[cusor] < arr[cusor - 1]) {
+                    int temp = arr[cusor - 1];
+                    arr[cusor - 1] = arr[cusor];
+                    arr[cusor] = temp;
+                } else {  // else break loop
                     break;
                 }
             }
         }
 
-        for (int a : arr) {
-            System.out.print(" " + a);
-        }
+        return arr;
     }
 }
