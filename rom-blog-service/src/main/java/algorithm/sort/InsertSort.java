@@ -14,8 +14,8 @@ public class InsertSort {
     public static int[] sort(int[] arr) {
 
         for (int i = 1; i < arr.length; i++) {  // forEach (array's length -1)
-
-            for (int cusor = i; cusor > 0; cusor--) {  // cursor from right to left
+            // cursor from right to left, position[1] equal pos[0]
+            for (int cusor = i; cusor > 0; cusor--) {
                 if (arr[cusor] < arr[cusor - 1]) {
                     int temp = arr[cusor - 1];
                     arr[cusor - 1] = arr[cusor];

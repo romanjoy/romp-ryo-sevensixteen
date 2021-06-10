@@ -1,10 +1,10 @@
 package algorithm.sort;
 
 /**
- * Base chain reverse
+ * Bubble sort
  *
  * @author Roman Fu
- * @version 1.0 Bubble sort <br>
+ * @version 1.0
  */
 public class BubbleSort {
     private BubbleSort() {
@@ -14,8 +14,8 @@ public class BubbleSort {
     public static int[] bubbleSort(int[] arr) {
 
         for (int i = 0; i < arr.length; i++) {  // forEach array's length
-
-            for (int index = 0; index < arr.length - i - 1; index++) {  /* equal times = element numbers - 1 */
+            /* equal times = element numbers - 1 */
+            for (int index = 0; index < arr.length - i - 1; index++) {
                 if (arr[index] > arr[index + 1]) {
                     int temp = arr[index + 1];
                     arr[index + 1] = arr[index];  // change array's position
