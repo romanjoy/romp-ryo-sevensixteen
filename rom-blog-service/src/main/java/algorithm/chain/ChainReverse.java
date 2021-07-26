@@ -17,13 +17,13 @@ public class ChainReverse {
         if (node == null) {
             return null;
         }
-        ListNode<String> cursor = node;  // cursor forEach
+        ListNode<String> cursor = node;  // cursor
         ListNode<String> revHolder = new ListNode<>();  // holder
 
         while (cursor != null) {
             ListNode<String> next = cursor.next;
-            cursor.next = revHolder;  // point to holder (change 'cursor.next' address)
-            revHolder = cursor;
+            cursor.next = revHolder;  // point to holder (change address of cursor.next)
+            revHolder = cursor;  // save cursor
             cursor = next;  // continue to forEach
         }
 
