@@ -1,7 +1,7 @@
 package algorithm.stack;
 
 /**
- * Chain Stack
+ * Chain Stack (Last In First Out)
  *
  * @author Roman Fu
  * @version 1.0
@@ -27,8 +27,8 @@ public class ChainStack {
     public void push(Object obj) {
         Element element = new Element();
         element.data = obj;
-        element.next = top;
-        top = element;  // update top cursor
+        element.next = top;  // element.next save top
+        top = element;  // update top
     }
 
     // pop
@@ -37,7 +37,7 @@ public class ChainStack {
             return null;
         }
         Object obj = top.data;
-        top = top.next;
+        top = top.next;  // update top's cursor
 
         return obj;
     }

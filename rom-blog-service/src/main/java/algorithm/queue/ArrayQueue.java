@@ -1,11 +1,11 @@
 package algorithm.queue;
 
 /**
- * Array Queue
+ * Array Queue (First In, First Out)
  *
  * @author Roman Fu
  * @version 1.0 <br>
- * 1.1 Array copy along with enqueue operator, keep dequeue() in source code
+ * 1.1 Enqueue item to free memory by using 'Array copy', keep dequeue() in source code
  */
 public class ArrayQueue {
     private String[] items;

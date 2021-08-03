@@ -1,7 +1,7 @@
 package algorithm.queue;
 
 /**
- * Chain Queue
+ * Chain Queue (First In, First Out)
  *
  * @author Roman Fu
  * @version 1.0
