@@ -1,20 +1,20 @@
 package algorithm.stack;
 
 /**
- * Array Stack
+ * Array Stack (Last In First Out)
  *
  * @author Roman Fu
  * @version 1.0
  */
 public class ArrayStack {
     private String[] items;
-    private int count;  // element in stack
+    private int count;  // element count
     private int capacity;  // stack length
 
     public ArrayStack(int capacity) {
         this.items = new String[capacity];
         this.capacity = capacity;
-        this.count = 0;  // init [].length = 0
+        this.count = 0;  // init []
     }
 
     // push

@@ -1,7 +1,9 @@
 package algorithm.chain;
 
 /**
- * think palindrome in base chain
+ * Judge palindrome in base chain
+ * ex: 上海自来 水 来自海上
+ * ex: TCECT
  *
  * @author Roman Fu
  * @version 1.0
