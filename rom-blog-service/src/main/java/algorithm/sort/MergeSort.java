@@ -1,18 +1,52 @@
 package algorithm.sort;
 
-//TODO
+/**
+ * MergeSort sort
+ *
+ * @author Roman Fu
+ * @version 1.0
+ */
 public class MergeSort {
-    public static void main(String[] args) {
-        int arr[] = {7, 5, 3, 2, 4, 1, 6};
-
-        int start = 0;
-        int end = arr.length - 1;
-        mergeSort(arr, start, end);
-        System.out.println("merge sort over.");
+    /* print array */
+    static void printArray(int[] arr) {
+        for (int j : arr) {
+            System.out.print(j + " ");
+        }
+        System.out.println();
     }
 
-    /* mergeSort */
-    public static void mergeSort(int[] arr, int start, int end) {
+    /*  */
+    static void merge() {
+
+    }
+
+    /* Main function sorts by recursive */
+    void sort(int[] arr, int left, int right) {
+        if (left < right) {
+            // Find middle point
+            int m = (left + right) / 2;
+
+            // Sort first & second halves
+            sort(arr, left, m);
+            sort(arr, m + 1, right);
+
+            merge(); // todo
+        }
+    }
+
+
+    public static void main(String[] args) {
+        int[] arr = {7, 5, 3, 2, 4, 1, 6};
+        printArray(arr);
+
+        MergeSort ob = new MergeSort();
+        ob.sort(arr, 0, arr.length - 1);
+
+        printArray(arr);
+    }
+
+    /* mergeSort pre version */
+    static void mergeSort(int[] arr, int start, int end) {
         if (end - start > 0) {
             mergeSort(arr, start, (start + end) / 2);
             mergeSort(arr, (start + end) / 2 + 1, end);
@@ -51,4 +85,5 @@ public class MergeSort {
             }
         }
     }
+
 }
