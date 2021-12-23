@@ -13,14 +13,14 @@ public class SelectionSort {
 
     public static int[] sort(int[] arr) {
 
-        for (int i = 0; i < arr.length; i++) {  // forEach array's length
-            int min = arr[i];  // default first is min
-            int index = i;  // sava min's index
+        for (int i = 0; i < arr.length; i++) {
+            int min = arr[i];  // dim element[0] is min
+            int index = i;    // sava min's cursor
 
             for (int j = i + 1; j < arr.length; j++) {
                 if (min > arr[j]) {
-                    min = arr[j];  // find min value
-                    index = j;  // find min's index
+                    min = arr[j];  // look for min
+                    index = j;    // look for min's cursor
                 }
             }
 

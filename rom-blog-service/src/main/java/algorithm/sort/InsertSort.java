@@ -14,16 +14,18 @@ public class InsertSort {
     public static int[] sort(int[] arr) {
 
         for (int i = 1; i < arr.length; i++) {  // forEach (array's length -1)
-            // cursor from right to left, position[1] equal pos[0]
-            for (int cusor = i; cusor > 0; cusor--) {
-                if (arr[cusor] < arr[cusor - 1]) {
-                    int temp = arr[cusor - 1];
-                    arr[cusor - 1] = arr[cusor];
-                    arr[cusor] = temp;
-                } else {  // else break loop
+
+            /* cursor from right to left, un-sort list equals with sort list */
+            for (int cursor = i; cursor > 0; cursor--) {
+                if (arr[cursor] < arr[cursor - 1]) {
+                    int temp = arr[cursor - 1];
+                    arr[cursor - 1] = arr[cursor];
+                    arr[cursor] = temp;
+                } else {   // break equals
                     break;
                 }
             }
+
         }
 
         return arr;
