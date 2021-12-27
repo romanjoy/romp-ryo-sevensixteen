@@ -3,6 +3,7 @@ package algorithm.sort;
 /**
  * Insert Sort
  *
+ * @reference InsertSort.gif
  * @author Roman Fu
  * @version 1.0
  */
@@ -13,15 +14,14 @@ public class InsertSort {
 
     public static int[] sort(int[] arr) {
 
-        for (int i = 1; i < arr.length; i++) {  // forEach (array's length -1)
+        for (int i = 1; i < arr.length; i++) {  // equal times = from second element to arr.length
 
-            /* cursor from right to left, un-sort list equals with sort list */
-            for (int cursor = i; cursor > 0; cursor--) {
-                if (arr[cursor] < arr[cursor - 1]) {
-                    int temp = arr[cursor - 1];
-                    arr[cursor - 1] = arr[cursor];
-                    arr[cursor] = temp;
-                } else {   // break equals
+            for (int index = i; index > 0; index--) {  // index moved from right to left
+                if (arr[index] < arr[index - 1]) {
+                    int temp = arr[index - 1];
+                    arr[index - 1] = arr[index];
+                    arr[index] = temp;
+                } else {   // break
                     break;
                 }
             }
