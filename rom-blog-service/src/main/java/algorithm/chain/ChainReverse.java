@@ -5,7 +5,7 @@ package algorithm.chain;
  *
  * @author Roman Fu
  * @version 1.0 Chain forEach <br>
- * 1.1 Chain Recursion Formula
+ * 1.1 Chain Recursion
  */
 public class ChainReverse {
     private ChainReverse() {
@@ -31,8 +31,7 @@ public class ChainReverse {
     }
 
 
-    /* V1.1: Chain Recursion */
-    /* V1.1.1: update cursor's point, node structure */
+    /* V1.1: Chain reverse by recursion */
     public static ListNode<String> reverseByRec(ListNode<String> node) {
         if (node == null || node.next == null) {
             return node;
