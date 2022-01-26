@@ -22,8 +22,8 @@ public class Palindrome {
         ListNode<String> pre = new ListNode<>();   // previous node
 
         while (fast != null && fast.next != null) {
-            fast = fast.next.next;  // step 2
-            ListNode<String> next = slow.next;  // step 1
+            fast = fast.next.next;  // step by 2
+            ListNode<String> next = slow.next;  // step by 1
             slow.next = pre;
             pre = slow;
             slow = next;  // continue
