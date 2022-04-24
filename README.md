@@ -4,4 +4,4 @@
 
 ### 2. It's training space for algorithm
 
-#### 2.1
+#### 2.1 It's training space for Spring Cloud
