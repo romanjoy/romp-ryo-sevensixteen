@@ -1,7 +1,6 @@
 package algorithm.aes;
 
 import java.util.Base64;
-import java.util.Base64.Decoder;
 
 import javax.crypto.Cipher;
 import javax.crypto.spec.IvParameterSpec;
@@ -44,7 +43,7 @@ public class CBCEncryption {
             cipher.init(Cipher.ENCRYPT_MODE, keyspec, ivspec);
             byte[] encrypted = cipher.doFinal(plaintext);
 
-            return new sun.misc.BASE64Encoder().encode(encrypted);
+            return Base64.getEncoder().encodeToString(encrypted);
         } catch (Exception e) {
             e.printStackTrace();
             return null;
@@ -58,7 +57,7 @@ public class CBCEncryption {
             String key = "1234567890abcdef";
             String iv = "7c8ac6861661d584";
 
-            Decoder decoder = Base64.getDecoder();
+            Base64.Decoder decoder = Base64.getDecoder();
             byte[] encrypted1 = decoder.decode(data);
 
             Cipher cipher = Cipher.getInstance("AES/CBC/NoPadding");
