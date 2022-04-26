@@ -1,10 +1,10 @@
-package concurrency;
+package com.example.rom.concurrency;
 
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
- * Print 1~100 By two threads in lock condition <br>
+ * Print 1~100 By two threads in lock condition
  *
  * @author Roman Fu
  * @version 1.0

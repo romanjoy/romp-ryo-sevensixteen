@@ -1,8 +1,8 @@
-package concurrency;
+package com.example.rom.concurrency;
 
 /**
- * Use synchronized to protect Object lock(private),<br>
- * client can access by public method (someMethod) using synchronized (myLock).
+ * <p>Use synchronized to protect Object lock(private),
+ * client can access by public method (someMethod) using synchronized (myLock). </p>
  *
  * @author Roman Fu
  * @version 1.0
@@ -12,7 +12,7 @@ public class PrivateLock {
 
     void someMethod() {
         synchronized (myLock) {
-            // do something
+            System.out.println("oh, my god!");
         }
     }
 }

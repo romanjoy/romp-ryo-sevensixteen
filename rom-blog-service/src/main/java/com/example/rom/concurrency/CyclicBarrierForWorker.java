@@ -1,9 +1,9 @@
-package concurrency;
+package com.example.rom.concurrency;
 
 import java.util.concurrent.CyclicBarrier;
 
 /**
- * Worker threads run in CyclicBarrier <br>
+ * Worker threads run in CyclicBarrier
  *
  * @author Roman Fu
  * @version 1.0
@@ -23,7 +23,7 @@ public class CyclicBarrierForWorker {
                 System.out.println(Thread.currentThread().getName() + "start to wait other thread...");
                 cyclicBarrier.await();
                 System.out.println(Thread.currentThread().getName() + " start to execute...");
-                Thread.sleep(3000);  // do something
+                Thread.sleep(5000);  // do something
                 System.out.println(Thread.currentThread().getName() + "execute over.");
             } catch (Exception e) {
                 e.printStackTrace();
@@ -32,13 +32,13 @@ public class CyclicBarrierForWorker {
     }
 
     public static void main(String[] args) {
-         int threadCount = 3;
-         CyclicBarrier cyclicBarrier = new CyclicBarrier(threadCount);
+        int threadCount = 3;
+        CyclicBarrier cyclicBarrier = new CyclicBarrier(threadCount);
 
-         for (int i=0; i<threadCount; i++) {
-             System.out.println("Worker thread will be created,No." + i);
-             Worker worker = new Worker(cyclicBarrier);
-             worker.start();
-         }
+        for (int i = 0; i < threadCount; i++) {
+            System.out.println("Worker thread will be created,No." + i);
+            Worker worker = new Worker(cyclicBarrier);
+            worker.start();
+        }
     }
 }
