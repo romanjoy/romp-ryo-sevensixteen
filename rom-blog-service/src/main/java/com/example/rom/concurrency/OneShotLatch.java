@@ -1,9 +1,9 @@
-package concurrency;
+package com.example.rom.concurrency;
 
 import java.util.concurrent.locks.AbstractQueuedSynchronizer;
 
 /**
- * Binary semaphore in OneShotLatch <br>
+ * Binary semaphore (0 or 1)
  *
  * @author Roman Fu
  * @version 1.0

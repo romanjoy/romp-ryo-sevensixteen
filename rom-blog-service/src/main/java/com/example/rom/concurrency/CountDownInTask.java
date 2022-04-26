@@ -1,11 +1,11 @@
-package concurrency;
+package com.example.rom.concurrency;
 
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 /**
- * Two threads execute in CountDownLatch <br>
+ * Two threads execute in CountDownLatch
  *
  * @author Roman Fu
  * @version 1.0

@@ -1,4 +1,4 @@
-package jedis;
+package com.example.rom.jedis;
 
 import redis.clients.jedis.Jedis;
 
