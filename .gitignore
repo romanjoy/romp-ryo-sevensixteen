@@ -1,20 +1,7 @@
-# Compiled class file
+*/bin/*
+bin/
+
 *.class
-*.iml
-*.idea
-target/
-logs/
-**/bin
-**/.settings
-**/.classpath
-**/target
-*_app_logs
-
-
-# Log file
-*.log
-*.factorypath
-
 
 # Package Files #
 *.jar
@@ -24,8 +11,27 @@ logs/
 *.tar.gz
 *.rar
 
-
-# Eclipse #
-.classpath
-.project
+# Eclipse
 .settings/
+*.project
+*.classpath
+.prefs
+*.prefs
+.metadata/
+
+# Intellij
+.idea/
+*.iml
+*.iws
+out/
+
+# Maven
+log/*
+target/
+
+# Mac
+.DS_Store
+
+# Gradle
+.gradle/
+
