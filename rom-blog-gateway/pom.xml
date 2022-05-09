@@ -7,6 +7,7 @@
         <artifactId>rom-blog-code</artifactId>
         <groupId>org.romanjoy</groupId>
         <version>1.0.0</version>
+        <relativePath>../rom-blog-springboot/pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <artifactId>rom-blog-gateway</artifactId>
@@ -19,6 +20,10 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
     </dependencies>
 
