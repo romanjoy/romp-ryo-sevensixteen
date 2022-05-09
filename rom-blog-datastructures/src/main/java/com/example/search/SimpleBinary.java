@@ -1,4 +1,4 @@
-package com.example.rom.algorithm.search;
+package com.example.search;
 
 /**
  * Simple Binary Search
@@ -8,11 +8,8 @@ package com.example.rom.algorithm.search;
  * @reference simpleBinary.gif
  */
 public class SimpleBinary {
-    private SimpleBinary() {
-        throw new IllegalStateException("Utility class");
-    }
 
-    public static int binary(int[] arr, int length, int value) {
+    public int binary(int[] arr, int length, int value) {
         int low = 0;
         int high = length - 1;
 
