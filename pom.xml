@@ -31,7 +31,7 @@
 
     <profiles>
         <profile>
-            <id>default-first</id>
+            <id>micro-service-boot</id>
             <build>
                 <plugins>
                     <plugin>
@@ -53,7 +53,6 @@
                 <module>rom-blog-service</module>
                 <module>rom-blog-eureka</module>
                 <module>rom-blog-gateway</module>
-                <module>rom-blog-springboot</module>
             </modules>
         </profile>
 
