@@ -5,12 +5,14 @@
 
     <parent>
         <artifactId>rom-blog-code</artifactId>
-        <groupId>org.romanjoy</groupId>
+        <groupId>org.romanjoy.springboot</groupId>
         <version>1.0.0</version>
         <relativePath>../rom-blog-springboot/pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <artifactId>rom-blog-eureka</artifactId>
+    <version>0.0.1</version>
+    <packaging>jar</packaging>
 
     <dependencies>
         <dependency>

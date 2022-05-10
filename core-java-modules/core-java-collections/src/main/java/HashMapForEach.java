@@ -1,6 +1,3 @@
-package com.example.rom.collections;
-
-
 import java.util.HashMap;
 import java.util.Map;
 
@@ -8,8 +5,8 @@ import java.util.Map;
  * HashMap forEach: entrySet had better to be used.
  *
  * @author Roman Fu
- * @version 1.1 enhance foreach <br>
- * 1.0 Iterator while <br>
+ * @version <p>1.1 Foreach entrySet </p>
+ * 1.0 Iterator while
  */
 public class HashMapForEach {
     public static void main(String[] args) {
