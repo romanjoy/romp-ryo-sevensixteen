@@ -1,4 +1,4 @@
-package com.example.rom.design;
+package com.example.design;
 
 /**
  * SingletonOne - Hungry Mode

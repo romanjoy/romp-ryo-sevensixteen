@@ -1,6 +1,4 @@
-package com.example.rom.design;
-
-import java.lang.reflect.Constructor;
+package com.example.design;
 
 /**
  * SingletonOne - Lazy Mode
@@ -34,13 +32,5 @@ public class SingletonOne {
             }
         }
         return singletonOne;
-    }
-
-    public static void main(String[] args) throws Exception {
-        Constructor<SingletonOne> construct = SingletonOne.class.getDeclaredConstructor();
-        construct.setAccessible(true);
-        SingletonOne obj1 = construct.newInstance();
-        SingletonOne obj2 = SingletonOne.getInstance2();
-        System.out.println(obj1 == obj2); // false
     }
 }
