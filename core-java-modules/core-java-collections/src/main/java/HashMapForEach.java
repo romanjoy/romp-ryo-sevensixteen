@@ -10,7 +10,7 @@ import java.util.Map;
  */
 public class HashMapForEach {
     public static void main(String[] args) {
-        HashMap<String, Integer> map = new HashMap<>(3);  // init capacity
+        HashMap<String, Integer> map = new HashMap<>(3);  // had better to init capacity
         map.put("age", 15);
         map.put("height", 176);
         map.put("weight", 70);
