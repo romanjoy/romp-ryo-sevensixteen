@@ -1,4 +1,4 @@
-package com.example.rom.concurrency;
+package threadlocal;
 
 import java.text.SimpleDateFormat;
 import java.util.HashMap;
@@ -12,25 +12,25 @@ import java.util.concurrent.locks.ReentrantLock;
  * @author Roman Fu
  * @version 1.0
  */
-public class DataFormatSafe {
+public class DataFormatThreadSafeByThreadLocal {
     private final static Map<String, ThreadLocal<SimpleDateFormat>> sdfMap =
             new HashMap<>();
     private final static ReentrantLock sdfLock = new ReentrantLock();  // obj lock
 
     /**
-     *
+     * Thread safe SimpleDateFormat
      *
      * @param pattern data format pattern
      * @return SimpleDateFormat
      */
     public static SimpleDateFormat getDateFormat(final String pattern) {
         ThreadLocal<SimpleDateFormat> tl = sdfMap.get(pattern);
+
         if (tl == null) {
             try {
                 if (!sdfLock.tryLock(10, TimeUnit.MILLISECONDS)) {
                     return new SimpleDateFormat(pattern);
                 }
-
                 tl = sdfMap.get(pattern);
                 if (tl == null) {
                     tl = ThreadLocal.withInitial(() -> new SimpleDateFormat(pattern));
@@ -42,6 +42,7 @@ public class DataFormatSafe {
                 sdfLock.unlock();
             }
         }
+
         return tl.get();
     }
 }
