@@ -1,11 +1,11 @@
-package com.example.rom.concurrency;
+package publish;
 
 import org.w3c.dom.events.Event;
 import org.w3c.dom.events.EventListener;
 import org.w3c.dom.events.EventTarget;
 
 /**
- * Publish and adding eventListener by using private constructor & static method,
+ * <p>Publish and adding eventListener by using private constructor & static method,
  * which can prevent escaping "this".
  *
  * @author Roman Fu
