@@ -112,6 +112,7 @@
             <modules>
                 <module>rom-blog-datastructures</module>
                 <module>rom-blog-parentjava</module>
+                <module>rom-blog-drools</module>
             </modules>
         </profile>
 
