@@ -22,7 +22,7 @@ public class DroolsBeanFactory {
 
     private KieFileSystem getKieFileSystem() throws IOException {
         KieFileSystem kieFileSystem = kieServices.newKieFileSystem();
-        List<String> rules = Arrays.asList("BackwardChaining.drl", "SuggestApplicant.drl", "Product_rules.xls");
+        List<String> rules = Arrays.asList("BackwardChaining.drl", "SuggestApplicant.drl", "Discount.xls");
         for (String rule : rules) {
             kieFileSystem.write(ResourceFactory.newClassPathResource(rule));
         }
@@ -56,7 +56,7 @@ public class DroolsBeanFactory {
 
         kieFileSystem.write(ResourceFactory.newClassPathResource("com/baeldung/drools/rules/BackwardChaining.drl"));
         kieFileSystem.write(ResourceFactory.newClassPathResource("com/baeldung/drools/rules/SuggestApplicant.drl"));
-//        kieFileSystem.write(ResourceFactory.newClassPathResource("com/baeldung/drools/rules/Product_rules.xls"));
+        kieFileSystem.write(ResourceFactory.newClassPathResource("com/baeldung/drools/rules/Discount.xls"));
 
         KieBuilder kb = kieServices.newKieBuilder(kieFileSystem);
         kb.buildAll();
