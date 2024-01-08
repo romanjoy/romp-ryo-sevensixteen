@@ -1,5 +1,12 @@
 package com.example.linkedlist.reverse;
 
+/**
+ * Linked list reversal
+ *
+ *
+ * @author Roman Fu
+ * @version 0.1.1
+ */
 public class LinkedListReversal {
 
     ListNode constructLinkedList() {

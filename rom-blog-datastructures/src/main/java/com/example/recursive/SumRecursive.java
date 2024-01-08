@@ -1,14 +1,14 @@
 package com.example.recursive;
 
 /**
- * SumRecursive
+ * How to deal Sum(100) with Recurrences
  *
  * <p>Formula:</p>
- *   <p>&nbsp;&nbsp; Sum(n) = n + Sum(n-1)
- *   <p>&nbsp;&nbsp; Sum(3) = 3 + Sum(2), Sum(2) = 2 + Sum(1), Sum(1) = 1
+ *   &nbsp;&nbsp; Sum(n) = n + Sum(n-1) <br/>
+ *   &nbsp;&nbsp; Sum(3) = 3 + Sum(2), Sum(2) = 2 + Sum(1), Sum(1) = 1
  *
  * @author Roman Fu
- * @version 1.0
+ * @version 0.2.2
  */
 public class SumRecursive {
 
